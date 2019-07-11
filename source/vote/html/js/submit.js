@@ -42,7 +42,7 @@ function beforeRegister()
     }).done(function(resp) {
        
     }).fail(function(err) {
-        alert('fail!');
+        alert('xxxfail!');
     });
 	return true;
 }

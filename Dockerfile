@@ -4,7 +4,7 @@ COPY config/000-default.conf /etc/apache2/sites-available/000-default.conf
 COPY schema.sql schema.sql
 COPY privileges.sql privileges.sql
 COPY mysql-setup.sh mysql-setup.sh
-COPY --chown=www-data:www-data source /var/www/html
+COPY --chown=www-data:www-data /source /var/www/html
 RUN echo "flag{test}" > /flag
 RUN chmod +x /mysql-setup.sh
 #ENTRYPOINT ["/mysql-setup.sh"]

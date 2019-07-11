@@ -29,7 +29,7 @@
    $uid = $_COOKIE['uid'];
    $idolid = $_SESSION['idolid'];
    
-   $pdo = new PDO('mysql:host=localhost;dbname=doki', 'root', '123');
+   $pdo = new PDO('mysql:host=localhost;dbname=doki', 'dokiuser', '123456');
    $sql = "select like_total from Pickidol where userid=:uid and idolid=$idolid;";
    $stmt = $pdo->prepare($sql);                                                                                               
    $stmt->bindParam(':uid', $uid);

@@ -2,7 +2,7 @@
 
    require('login.php');
    include('database.php');
-   $pdo = new PDO('mysql:host=localhost;dbname=doki', 'root', '123');
+   $pdo = new PDO('mysql:host=localhost;dbname=doki', 'dokiuser', '123456');
 
    session_start();
    $uid = $_COOKIE['uid'];
@@ -39,7 +39,7 @@
        
         //$idolname=$row['idolname'];
         $_SESSION['idolid'] = $idolid;
-        $pdo = new PDO('mysql:host=localhost;dbname=doki', 'root', '123');
+        $pdo = new PDO('mysql:host=localhost;dbname=doki', 'dokiuser', '123456');
         $sql = "select * from Pickidol where userid=:uid and idolid=$idolid;";
         $stmt = $pdo->prepare($sql);                                                                                               
         $stmt->bindParam(':uid', $uid);
@@ -51,7 +51,7 @@
         
         if (!isset($result['like_total'])){
             //var_dump("nonono");
-            $pdo = new PDO('mysql:host=localhost;dbname=doki', 'root', '123');
+            $pdo = new PDO('mysql:host=localhost;dbname=doki', 'dokiuser', '123456');
             $sql = "insert into Pickidol(userid,idolid,like_total) values (:uid,:idolid,1);";
             $stmt = $pdo->prepare($sql);                                                                                               
             $stmt->bindParam(':uid', $uid);
@@ -62,7 +62,7 @@
         else{
             //var_dump("okokok");
             $like_total=1+$like_total;
-            $pdo = new PDO('mysql:host=localhost;dbname=doki', 'root', '123');
+            $pdo = new PDO('mysql:host=localhost;dbname=doki', 'dokiuser', '123456');
             $sql="update Pickidol set like_total=$like_total where userid=:uid and idolid='$idolid';";
             $stmt = $pdo->prepare($sql);                                                                                                 
             $stmt->bindParam(':uid', $uid);                                                                                         

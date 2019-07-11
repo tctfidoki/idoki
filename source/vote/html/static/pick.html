@@ -95,18 +95,18 @@
         async:false,
         success:function (data) {           //成功回调
             obj = JSON.parse(data); 
-            // console.log(obj[1][2]);       
+            //console.log(obj[1][2]);       
         }
     }).done(function(resp) {
         
     }).fail(function(err) {
       
     });
-            var mem='';
-            for (var i=1;i<13;i++)
-            {
+        var mem='';
+        for (var i=1;i<13;i++)
+        {
                 mem+='<div class="b_i_ci"><div class="b_i_cii"><a href="mem.html?'+obj[i][0]+'"><img src="./images/'+obj[i][1]+'_pick.jpg"></a></div><div class="b_i_cit">'+obj[i][2]+'</div></div>';
-            }
+        }
             var newdiv = document.getElementById("mem_con"); 
             newdiv.innerHTML =mem;
         </script>

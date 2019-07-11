@@ -1,8 +1,8 @@
 <?php
     header("Content-Type: text/html; charset=utf8");
     $server="localhost";
-    $db_username="root";
-    $db_password="123";
+    $db_username="dokiuser";
+    $db_password="123456";
     $db_database="doki";
     
     $con = mysqli_connect($server,$db_username,$db_password,$db_database);//连接数据库
