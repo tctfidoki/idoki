@@ -1,0 +1,2 @@
+# idoki
+A voting platform.
