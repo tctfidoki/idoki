@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>主页</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            font-size:12px;
+            background-image: url(./vote/html/static/images/all.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .all-content
+        {
+            padding: 65px;
+            margin: 0 auto;
+            padding-top: 10%;
+        }
+        .header
+        {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .header h1
+        {
+            font-size: 50px;
+            color: #fff;
+            font-family: "幼圆";
+            letter-spacing: 3px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px #000;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .white-bg
+        {
+            width: 35%;
+            margin: 0 auto;
+            height: 370px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+
+        }
+        .denglu
+        {
+            text-align: center;
+            color: #000;
+            margin: 0 auto;
+            margin: 0px;
+            padding: 50px 40px;
+            padding-left: 10px;
+        }
+        .denglu input[type="text"],.denglu input[type="password"]
+        {
+            padding: 13px 10px;
+            width: 80%;
+            outline: none;
+            background: transparent;
+            border: 1px solid #fff;
+            font-family: "宋体";
+            letter-spacing: 1.6px;
+            color: black;
+            border-radius: 10px;
+
+        }
+        .submit{
+            margin-left:27px;
+            margin-top:10px;
+            width:210px;
+            height:60px;
+            background:rgba(255,255,255);
+            border:1px solid #fff;
+            font-size:20px;
+            color:black;
+            font-family:"微软雅黑";
+            cursor: pointer;
+            border-radius: 10px; 
+        }
+    </style>
+    <body>
+        <div class="all-content">
+            <div class="white-bg">
+            <div class="header">
+            </div>
+            <div class="denglu">
+                <button class="submit" onclick="javascrtpt:window.location.href='./vote/html/static/signin.html'">sign in</button>
+                <br><br><br>
+                <button class="submit" onclick="javascrtpt:window.location.href='./vote/html/static/signup.html'">sign up</button>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>
