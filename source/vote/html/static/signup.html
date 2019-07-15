@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="../js/submit.js"></script>
+    <!-- <script src="../../register.php"></script> -->
+    <meta charset="utf-8">
+    <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <title>注册</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            font-size:12px;
+            background-image: url(images/log1.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center 73%;
+        }
+        .all-content
+        {
+            padding: 10%;
+            margin: 0 auto;
+        }
+        .white-bg
+        {
+           /* padding-top: 100px; */
+           /* margin-top: 10%; */
+            background: rgba(255,255,255,0.3);
+        }
+        .header
+        {
+            text-align: center;
+            padding-top: 50px;
+        }
+        .header h1
+        {
+            font-size: 50px;
+            color: #fff;
+            font-family: "幼圆";
+            letter-spacing: 3px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 4px #000;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .white-bg
+        {
+            width: 46%;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+        .denglu
+        {
+            text-align: center;
+            color: #000;
+            margin: 0 auto;
+            margin: 0px;
+            padding: 50px 40px;
+        }
+        .denglu input[type="text"],.denglu input[type="password"]
+        {
+            padding: 13px 10px;
+            width: 65%;
+            outline: none;
+            background: transparent;
+            border: 1px solid #fff;
+            font-family: "宋体";
+            letter-spacing: 1.6px;
+            color: black;
+            border-radius: 10px;
+
+        }
+        .submit{
+            margin-left:5px;
+            margin-top:10px;
+            width:200px;
+            height:40px;
+            background:rgba(255,255,255);
+            border:1px solid #fff;
+            font-size:16px;
+            color:black;
+            font-family:"微软雅黑";
+            cursor: pointer;
+            border-radius: 10px; 
+        }
+    </style>
+    </head>
+    <body>
+        <div class="all-content">
+            <div class="white-bg">
+            <div class="header">
+                <h1>signup</h1>
+            </div>
+            <div class="denglu">
+                <form name="signup_form" action="../../register.php" method="post" >
+                <input type="text" name="account" placeholder="输入用户名" id="account">
+                <br><br><br>
+                <input type="password" name="password" id="password" placeholder="输入你设定的密码">
+                <br><br><br>
+                <input type="password" id="repassword" name="repassword" placeholder="再次输入密码">
+                <br><br><br>
+            </form>
+                <button id="butt" name="butt" class="submit" onclick="beforeRegister()">sign up</button>
+            <!-- </form> -->
+        
+           
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,7 @@
+version: '3'
+services:
+    idoki_web:   
+        build: .
+        container_name: idoki
+        ports:
+            - 80:80
