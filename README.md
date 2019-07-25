@@ -1,2 +1,2 @@
+# A voting platform
 
-# Build it
