@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>pickup</title>
+    <style type="text/css">
+        *{
+            padding:0;
+            margin:0;
+        }
+        body{
+            background: #1e1c1b;
+            font-size: 16px;
+            color: #fffae3;
+        }
+        .mem_box {
+            width: 1200px;
+            border-radius: 50px;
+            padding-bottom: 10px;
+            margin: 5% auto 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .mem_bt {
+            height: 51px;
+            line-height: 50px;
+            padding-left: 90px;
+            margin: 15px 0 0 10px;
+            display: inline-block;
+            font-size: 36px;
+            color: #fff5bb;
+            font-weight: bold;
+        }
+        .mem_con {
+            background: #302d2c;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        .b_i_ci {
+            width: 147px;
+            float: left;
+            padding:20px 15px;
+            margin-top: 10px;
+            margin-left: 16px;
+            margin-right: -5px;
+        }
+        .b_i_cii {
+            text-align: center;
+            position: relative;
+            width: 120px;
+            height: 120px;
+/*            border: 1px solid #d7effc;*/
+/*            border-radius: 5px;*/
+            overflow: hidden;
+        }
+        .b_i_cii img {
+            width: 120px;
+/*            margin-top: -4px;*/
+        }
+        .b_i_cit {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            width: 120px;
+        }
+        .clear::after {
+            content: '';
+            display: block;
+            clear: both;
+            visibility: hidden;
+            height: 0;
+        }
+        img
+        {
+            border-radius: 100%;
+        }
+    </style>
+    <body>
+        <div class="mem_box">
+            <div class="mem_bt">pick你心动的idol</div>
+            <br>
+            <div id="mem_con" class="mem_con clear"> 
+            </div>
+        </div>
+        <script src="../../transfer.php"></script>
+        <script type="text/javascript" src="../js/submit.js"></script>
+        <meta charset="utf-8">
+        <script src="../js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        var obj=[];
+        data="1";
+        $.ajax({
+        url: "../../transfer.php",
+        type: "POST",
+        async:false,
+        success:function (data) {           //成功回调
+            obj = JSON.parse(data); 
+            // console.log(obj[1][2]);       
+        }
+    }).done(function(resp) {
+        
+    }).fail(function(err) {
+      
+    });
+            var mem='';
+            for (var i=1;i<13;i++)
+            {
+                mem+='<div class="b_i_ci"><div class="b_i_cii"><a href="mem.html?'+obj[i][0]+'"><img src="./images/'+obj[i][1]+'_pick.jpg"></a></div><div class="b_i_cit">'+obj[i][2]+'</div></div>';
+            }
+            var newdiv = document.getElementById("mem_con"); 
+            newdiv.innerHTML =mem;
+        </script>
+    </body>
+</html>
